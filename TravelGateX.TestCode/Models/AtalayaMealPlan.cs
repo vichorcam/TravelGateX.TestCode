@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 
-namespace TravelGateX.TestCode.Models.MealPlan
+namespace TravelGateX.TestCode.Models
 {
     [JsonObject]
-    public class MealPlan
+    public class AtalayaMealPlan
     {
         [JsonProperty("code")]
         public string code { get; set; }
@@ -27,10 +27,10 @@ namespace TravelGateX.TestCode.Models.MealPlan
     }
 
     [JsonObject]
-    public class MealPlansInfo
+    public class AtalayaMealPlans
     {
         [JsonProperty("meal_plans")]
-        public List<MealPlan> mealPlans { get; set; }
+        public List<AtalayaMealPlan> mealPlans { get; set; }
 
     }
 

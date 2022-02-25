@@ -1,50 +1,56 @@
 ﻿using Newtonsoft.Json.Linq;
 using Newtonsoft.Json;
-using TravelGateX.TestCode.Models.Hotel;
-using TravelGateX.TestCode.Models.MealPlan;
-using TravelGateX.TestCode.Models.RoomsType;
-using TravelGateX.TestCode.Models.HotelRooms;
-using TravelGateX.TestCode.Models.Scheme;
+using TravelGateX.TestCode.Models.UniversalHotel;
+using TravelGateX.TestCode.Models;
+
+
+
 
 using (var client = new HttpClient())
 {
-    //GET Supplier hotel information
-    string urlHotels = "http://www.mocky.io/v2/5e4a7e4f2f00005d0097d253";
+    //GET ATALAYA hotels information
+    string urlAtalayaHotels = "http://www.mocky.io/v2/5e4a7e4f2f00005d0097d253";
 
-    var resHotels = client.GetAsync(urlHotels).Result.Content.ReadAsStringAsync().Result;
+    var resAtalayaHotels = client.GetAsync(urlAtalayaHotels).Result.Content.ReadAsStringAsync().Result;
 
-    var hotelsInfo = JsonConvert.DeserializeObject<HotelsInfo>(resHotels);
-
-
-    //GET Supplier room information
-    string urlRoomsType = "https://run.mocky.io/v3/132af02e-8beb-438f-ac6e-a9902bc67036";
-
-    var resRoomsType = client.GetAsync(urlRoomsType).Result.Content.ReadAsStringAsync().Result;
-
-    var roomsTypeInfo = JsonConvert.DeserializeObject<RoomsTypeInfo>(resRoomsType);
+    var AtalayaHotels = JsonConvert.DeserializeObject<AtalayaHotels>(resAtalayaHotels);
 
 
-    //GET Supplier meal plans information
-    string urlMealPlans = "http://www.mocky.io/v2/5e4a7e282f0000490097d252";
+    //GET ATALAYA rooms information
+    string urlAtalayaRooms = "https://run.mocky.io/v3/132af02e-8beb-438f-ac6e-a9902bc67036";
 
-    var resMealPlans = client.GetAsync(urlMealPlans).Result.Content.ReadAsStringAsync().Result;
+    var resAtalayaRooms = client.GetAsync(urlAtalayaRooms).Result.Content.ReadAsStringAsync().Result;
 
-    var mealPlansInfo = JsonConvert.DeserializeObject<MealPlansInfo>(resMealPlans);
-
-
-    //GET Supplier hotel with rooms information
-    string urlHotelRooms = "http://www.mocky.io/v2/5e4e43272f00006c0016a52b";
-
-    var resHotelRooms = client.GetAsync(urlHotelRooms).Result.Content.ReadAsStringAsync().Result;
-
-    var hotelRoomsInfo = JsonConvert.DeserializeObject<HotelRoomsInfo>(resHotelRooms);
+    var AtalayaRooms = JsonConvert.DeserializeObject<AtalayaRooms>(resAtalayaRooms);
 
 
-    //GET Available schemes information
-    string urlSchemes = "http://www.mocky.io/v2/5e4a7dd02f0000290097d24b";
+    //GET ATALAYA meal plans information
+    string urlAtalayaMealPlans = "http://www.mocky.io/v2/5e4a7e282f0000490097d252";
 
-    var resSchemes = client.GetAsync(urlSchemes).Result.Content.ReadAsStringAsync().Result;
+    var resAtalayaMealPlans = client.GetAsync(urlAtalayaMealPlans).Result.Content.ReadAsStringAsync().Result;
 
-    var schemesInfo = JsonConvert.DeserializeObject<SchemesInfo>(resSchemes);
+    var atalayaMealPlans = JsonConvert.DeserializeObject<AtalayaMealPlans>(resAtalayaMealPlans);
+
+
+    //GET RESORT hotel with rooms information
+    string urlResortHotelRooms = "http://www.mocky.io/v2/5e4e43272f00006c0016a52b";
+
+    var resResortHotelRooms = client.GetAsync(urlResortHotelRooms).Result.Content.ReadAsStringAsync().Result;
+
+    var resortHotelRooms = JsonConvert.DeserializeObject<ResortHotelRooms>(resResortHotelRooms);
+
+
+    //GET RESORT meal plans information
+    string urlResortMealPlans = "http://www.mocky.io/v2/5e4a7dd02f0000290097d24b";
+
+    var resResortMealPlans = client.GetAsync(urlResortMealPlans).Result.Content.ReadAsStringAsync().Result;
+
+    var resortMealPlans = JsonConvert.DeserializeObject<ResortMealPlans>(resResortMealPlans);
+
+
+    UniversalHotels universalHotels = new UniversalHotels();
+    UniversalHotel a = new UniversalHotel();
+
+
 }
 

@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace TravelGateX.TestCode.Models.Scheme
+namespace TravelGateX.TestCode.Models
 {
-    public class Scheme
+    public class ResortMealPlan
     {
 
         [JsonProperty("code")]
@@ -21,10 +21,10 @@ namespace TravelGateX.TestCode.Models.Scheme
         public int price { get; set; }
     }
 
-    public class SchemesInfo
+    public class ResortMealPlans
     {
 
         [JsonProperty("regimenes")]
-        public IList<Scheme> schemes { get; set; }
+        public IList<ResortMealPlan> schemes { get; set; }
     }
 }

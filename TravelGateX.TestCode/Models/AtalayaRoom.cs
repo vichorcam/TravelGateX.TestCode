@@ -1,6 +1,6 @@
 ﻿using Newtonsoft.Json;
 
-namespace TravelGateX.TestCode.Models.RoomsType
+namespace TravelGateX.TestCode.Models
 {
     [JsonObject]
     public class RoomType
@@ -17,7 +17,7 @@ namespace TravelGateX.TestCode.Models.RoomsType
     }
 
     [JsonObject]
-    public class RoomsTypeInfo
+    public class AtalayaRooms
     {
         [JsonProperty("rooms_type")]
         public List<RoomType> roomsType { get; set; }

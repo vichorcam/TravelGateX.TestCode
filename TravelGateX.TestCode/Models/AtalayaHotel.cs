@@ -1,9 +1,9 @@
 ﻿using Newtonsoft.Json;
 
-namespace TravelGateX.TestCode.Models.Hotel
+namespace TravelGateX.TestCode.Models
 {
     [JsonObject]
-    public class Hotel
+    public class AtalayaHotel
     {
         [JsonProperty("code")]
         public string code { get; set; }
@@ -17,10 +17,10 @@ namespace TravelGateX.TestCode.Models.Hotel
     }
 
     [JsonObject]
-    public class HotelsInfo
+    public class AtalayaHotels
     {
         [JsonProperty("hotels")]
-        public List<Hotel> hotels { get; set; } 
+        public List<AtalayaHotel> hotels { get; set; } 
 
     }
 }

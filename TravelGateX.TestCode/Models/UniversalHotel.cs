@@ -18,7 +18,7 @@ namespace TravelGateX.TestCode.Models.UniversalHotel
         public int price { get; set; }
     }
 
-    public class Hotel
+    public class UniversalHotel
     {
 
         [JsonProperty("code")]
@@ -34,10 +34,10 @@ namespace TravelGateX.TestCode.Models.UniversalHotel
         public Rooms rooms { get; set; }
     }
 
-    public class UniversalHotelsInfo
+    public class UniversalHotels
     {
 
         [JsonProperty("hotels")]
-        public IList<Hotel> hotels { get; set; }
+        public List<Hotel> hotels { get; set; } = new List<Hotel>();
     }
 }
