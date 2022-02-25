@@ -1,8 +1,8 @@
 ﻿using Newtonsoft.Json;
 
-namespace TravelGateX.TestCode.Models.UniversalHotel
+namespace TravelGateX.TestCode.Models
 {
-    public class Rooms
+    public class UniversalRoom
     {
 
         [JsonProperty("name")]
@@ -11,8 +11,8 @@ namespace TravelGateX.TestCode.Models.UniversalHotel
         [JsonProperty("room_type")]
         public string roomType { get; set; }
 
-        [JsonProperty("meals_plan")]
-        public string mealsPlan { get; set; }
+        [JsonProperty("meal_plan")]
+        public string mealPlan { get; set; }
 
         [JsonProperty("price")]
         public int price { get; set; }
@@ -31,13 +31,13 @@ namespace TravelGateX.TestCode.Models.UniversalHotel
         public string city { get; set; }
 
         [JsonProperty("rooms")]
-        public Rooms rooms { get; set; }
+        public List<UniversalRoom> rooms { get; set; } = new List<UniversalRoom>();
     }
 
     public class UniversalHotels
     {
 
         [JsonProperty("hotels")]
-        public List<Hotel> hotels { get; set; } = new List<Hotel>();
+        public List<UniversalHotel> hotels { get; set; } = new List<UniversalHotel>();
     }
 }

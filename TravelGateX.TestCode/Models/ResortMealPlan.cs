@@ -25,6 +25,6 @@ namespace TravelGateX.TestCode.Models
     {
 
         [JsonProperty("regimenes")]
-        public IList<ResortMealPlan> schemes { get; set; }
+        public IList<ResortMealPlan> mealPlans { get; set; }
     }
 }

@@ -2,7 +2,7 @@
 
 namespace TravelGateX.TestCode.Models
 {
-    public class Room
+    public class ResortRoom
     {
 
         [JsonProperty("code")]
@@ -12,7 +12,7 @@ namespace TravelGateX.TestCode.Models
         public string name { get; set; }
     }
 
-    public class Hotel
+    public class ResortHotel
     {
 
         [JsonProperty("code")]
@@ -25,13 +25,13 @@ namespace TravelGateX.TestCode.Models
         public string location { get; set; }
 
         [JsonProperty("rooms")]
-        public IList<Room> rooms { get; set; }
+        public List<ResortRoom> rooms { get; set; }
     }
 
     public class ResortHotelRooms
     {
 
         [JsonProperty("hotels")]
-        public IList<Hotel> hotels { get; set; }
+        public IList<ResortHotel> hotels { get; set; }
     }
 }

@@ -3,7 +3,7 @@
 namespace TravelGateX.TestCode.Models
 {
     [JsonObject]
-    public class RoomType
+    public class AtalayaRoom
     {
         [JsonProperty("hotels")]
         public List<string> hotels { get; set; }
@@ -20,7 +20,7 @@ namespace TravelGateX.TestCode.Models
     public class AtalayaRooms
     {
         [JsonProperty("rooms_type")]
-        public List<RoomType> roomsType { get; set; }
+        public List<AtalayaRoom> roomsType { get; set; }
 
     }
 }

@@ -12,11 +12,11 @@ namespace TravelGateX.TestCode.Models
         public string name { get; set; }
 
         [JsonProperty("hotel")]
-        Dictionary<string, List<RoomPrice>> hotel { get; set; }
+        public Dictionary<string, List<AtalayaRoomPrice>> hotel { get; set; }
 
     }
 
-    public class RoomPrice
+    public class AtalayaRoomPrice
     {
         [JsonProperty("room")]
         public string room { get; set; }
